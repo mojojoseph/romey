@@ -6,24 +6,31 @@ x = VfLine.new
 x.width = 400
 x.height = 200
 x.view3d = "true"
-x.title = "Web Shit"
-x.series["TWOH"] = {"RHC" => 30,
-                      "DMA" => 15,
-                      "Operations" => 20,
-                      "RSC" => 7,
-                      "Loadbuild" => 9}
+x.title = "Temperatures"
+x.series["High"] = {"Jan" => 70,
+                    "Feb" => 65,
+                    "Mar" => 80,
+                    "Apr" => 85,
+                    "May" => 90,
+                    "Jun" => 95,
+                    "Jul" => 100,
+                    "Aug" => 105,
+                    "Sep" => 95,
+                    "Oct" => 85,
+                    "Nov" => 75,
+                    "Dec" => 70}
 
-x.series["DWOH"] = {"Jan" => 0,
-                      "Feb" => 17,
-                      "Mar" => 15,
-                      "Apr" => 4,
-                      "May" => 3}
+x.series["Low"] = {"Jan" => 25,
+                    "Feb" => 30,
+                    "Mar" => 35,
+                    "Apr" => 40,
+                    "May" => 50,
+                    "Jun" => 65,
+                    "Jul" => 70,
+                    "Aug" => 70,
+                    "Sep" => 65,
+                    "Oct" => 45,
+                    "Nov" => 35,
+                    "Dec" => 30}
 
-x.series["Else"] = {"Jan" => 0,
-                      "Feb" => 17,
-                      "Mar" => 15,
-                      "Apr" => 4,
-                      "May" => 3}
-  
-  
 puts x.to_xaml
