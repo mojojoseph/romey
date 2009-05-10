@@ -18,5 +18,12 @@ x.series["DWOH"] = {"Jan" => 0,
                       "Mar" => 15,
                       "Apr" => 4,
                       "May" => 3}
+
+x.series["Else"] = {"Jan" => 0,
+                      "Feb" => 17,
+                      "Mar" => 15,
+                      "Apr" => 4,
+                      "May" => 3}
+  
   
 puts x.to_xaml
