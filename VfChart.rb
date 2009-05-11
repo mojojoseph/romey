@@ -24,8 +24,9 @@ class VfChart
 
   @chart = nil
 
-  attr_accessor :width, :height, :theme, :view3d, :borderbrush
+  attr_accessor :width, :height, :theme, :view3d, :borderbrush, :colorset
   attr_accessor :title
+  attr_accessor :gradient
 
   def initialize
     @chart = Element.new("vc:Chart")
@@ -44,6 +45,20 @@ class VfChart
     @chart.attributes["Theme"] = "#{theme}"
     @chart.attributes["View3D"] = "#{view3d}"
     @chart.attributes["BorderBrush"] = "#{borderbrush}"
+#    @chart.attributes["ColorSet"] = "#{colorset}"
+
+    chartBackground = Element.new("vc:Chart.Background")
+    linearGradientBrush = Element.new("LinearGradientBrush")
+    gradientStop1 = Element.new("GradientStop")
+    gradientStop2 = Element.new("GradientStop")
+    gradientStop1.attributes["Color"] = "#a9a9a9"
+    gradientStop1.attributes["Offset"] = "0"
+    gradientStop2.attributes["Color"] = "#ffffff"
+    gradientStop2.attributes["Offset"] = "0.5"
+
+    chartBackground.add_element linearGradientBrush
+    linearGradientBrush.add_element gradientStop1
+    linearGradientBrush.add_element gradientStop2
 
     chartTitles = Element.new("vc:Chart.Titles")
     chartTitle  = Element.new("vc:Title")
@@ -51,6 +66,7 @@ class VfChart
 
     chartTitles.add_element chartTitle
     @chart.add_element chartTitles
+    @chart.add_element chartBackground
 
     @chart.to_s
     
