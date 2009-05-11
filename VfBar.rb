@@ -21,7 +21,7 @@ require 'VfChart'
 require 'rexml/document'
 include REXML
 
-class VfLine < VfChart
+class VfBar < VfChart
 
   attr_accessor :series
 
@@ -38,7 +38,7 @@ class VfLine < VfChart
       dataSeries  = Element.new("vc:DataSeries")
       
       dataSeries.attributes["LegendText"] = s
-      dataSeries.attributes["RenderAs"] = "Line"
+      dataSeries.attributes["RenderAs"] = "Bar"
       dataSeries.attributes["LabelEnabled"] = "True"
       dataSeries.attributes["LabelLineThickness"] = "0.5"
       dataSeries.attributes["Bevel"] = "False"

@@ -63,22 +63,3 @@ class VfChart
   end
 
 end
-
-
-
-
-
-# <vc:Chart.Series>
-# <vc:DataSeries RenderAs="Pie" LabelEnabled="True" LabelLineThickness="0.5" Bevel="False">
-# <vc:DataSeries.DataPoints>
-# <vc:DataPoint AxisXLabel="Yahoo" YValue="16.7" Exploded="True"/>
-# <vc:DataPoint AxisXLabel="Google" YValue="68.6"/>
-# <vc:DataPoint AxisXLabel="MSN/Live" YValue="8.7" Exploded="True"/>
-# <vc:DataPoint AxisXLabel="Ask" YValue="3.7" Exploded="True"/>
-# <vc:DataPoint AxisXLabel="AOL" YValue="1.7" Exploded="True"/>
-# <vc:DataPoint AxisXLabel="Others" YValue="0.6" Exploded="True"/>
-# </vc:DataSeries.DataPoints>
-# </vc:DataSeries>
-# </vc:Chart.Series>
-
-# </vc:Chart>
